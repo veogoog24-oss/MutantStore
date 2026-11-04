@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mutant Store — экипировка, питание и аксессуары для тех, кто не останавливается." />
+  <title>Mutant Store — стань сильнее</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Mutant Store Казань"><span class="brand-text"><b>MUTANT</b><i>STORE</i><small>КАЗАНЬ</small></span></a>
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="#catalog">Каталог</a><a href="#about">О магазине</a><a href="#contacts">Контакты</a>
+      </nav>
+      <button class="cart-button" id="cartButton" type="button" aria-label="Открыть корзину"><span class="cart-icon">🛒</span><span class="cart-label">Корзина</span><b id="cartCount">0</b></button>
+      <button class="menu-button" id="menuButton" aria-label="Открыть меню">☰</button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav"><a href="#catalog">Каталог</a><a href="#about">О магазине</a><a href="#contacts">Контакты</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> Магазин для тех, кто в тренде</div>
+          <h1>Стань своей<br><em>лучшей версией.</em></h1>
+          <p>Одежда и обувь которые помогают выходить за пределы каждый день.</p>
+          <div class="hero-actions"><a class="button button-dark" href="#catalog">Смотреть каталог <span>↗</span></a><a class="text-link" href="#about">Почему Mutant <span>→</span></a></div>
+          <div class="hero-meta"><div><strong>3+</strong><span>лет с модниками </span></div><div><strong>24/7</strong><span>поддержка</span></div><div><strong>100%</strong><span>качество</span></div></div>
+        </div>
+        <div class="hero-art" id="heroArt" aria-label="Товары дня">
+          <div class="hero-badge">Товары дня</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker"><div class="ticker-inner"><span>КАЧЕСТВЕННАЯ ПРОДУКЦИЯ</span><i>✦</i><span>ДОСТАВКА ПО ВСЕЙ РОССИИ</span><i>✦</i><span>СОБЕРИ СВОЙ АУТФИТ</span><i>✦</i></div></section>
+
+    <section class="catalog section" id="catalog"><div class="container">
+      <div class="section-head"><div><div class="eyebrow"><span></span> Выбери свой уровень</div><h2>Популярное <em>сейчас</em></h2></div><a class="text-link" href="#catalog">Весь каталог <span>→</span></a></div>
+      <div class="filters" id="filters"></div>
+      <div class="catalog-toolbar"><input type="search" id="searchInput" class="search-input" placeholder="Поиск: бренд, название…" aria-label="Поиск по каталогу"><span class="search-hint" id="searchHint"></span></div>
+      <div class="product-grid" id="productGrid"></div>
+    </div></section>
+
+    <section class="about section" id="about"><div class="container about-grid"><div class="about-visual"><img src="img/1978e3c4edc444d9a49fb599ebe19463.png" alt="Свитер Calvin Klein"></div><div class="about-copy"><div class="eyebrow"><span></span> Не просто магазин</div><h2>Твоя одежда —<br><em>твои правила.</em></h2><p>Мы собираем вещи и для тех, кто привык хорошо одеватся. Никаких случайностей — только проверенные бренды, честный состав и красивый дизайн.</p><div class="about-points"><div><b>01</b><span>Только качество<br><small>Проверяем каждого поставщика</small></span></div><div><b></b><span><br><small></small></span></div></div></div></div></section>
+
+    <section class="contact-section" id="contacts"><div class="container contact-grid"><div><div class="eyebrow light"><span></span> Мы рядом</div><h2>Залетай<br>в <em>Mutant.</em></h2></div><div class="contact-info"><div><small>АДРЕС</small><p>г. Казань, ул. Московская, 15<br>Ежедневно · 13:00 — 20:00</p></div><div><small>СВЯЗЬ</small><p>+7 (950) 315-19-20<br>@mutant_p1ayers</p></div><a class="button button-light" href="https://t.me/mutant_p1ayers">Написать нам <span>↗</span></a></div></div></section>
+  </main>
+
+  <footer><div class="container footer-wrap"><a class="brand" href="#top"><span class="brand-text"><b>MUTANT</b><i>STORE</i><small>КАЗАНЬ</small></span></a><p>© 2026 Mutant Store. Сделано для стильных.</p><div class="socials"><a href="https://web.telegram.org/a/#-1001865349624">TG</a></div></div></footer>
+
+  <aside class="cart-drawer" id="cartDrawer"><div class="drawer-head"><h3>Корзина</h3><button id="closeCart">×</button></div><div id="cartItems" class="cart-items"><p class="empty-cart">Пока пусто. Добавь что-нибудь сильное.</p></div><div class="cart-total"><span>Итого</span><strong id="cartTotal">0 ₽</strong></div><button class="button button-dark checkout" id="checkoutButton">Оформить заказ <span>↗</span></button></aside><div class="overlay" id="overlay"></div>
+
+
+  <!-- Модальное окно деталей товара -->
+  <div class="modal" id="productModal"><div class="modal-backdrop" id="modalBackdrop"></div><div class="modal-content"><button class="modal-close" id="modalClose">×</button><div class="modal-body"><div class="modal-photo"><img id="modalImg" src="" alt=""></div><div class="modal-info"><h2 id="modalTitle">Товар</h2><div class="modal-price" id="modalPrice">0 ₽</div><div class="modal-sizes"><strong>Доступные размеры:</strong><div id="modalSizesList"></div></div><div class="modal-desc"><strong>Описание:</strong><p id="modalDesc">Здесь будет описание товара — скопируй из ТГ бота и вставь в main.js (поле desc).</p></div><div class="modal-contacts"><strong>Контакты:</strong><div class="contacts-list"><div class="contact-row"><span class="contact-label">Телеграм</span><a class="contact-link" id="modalContactTg" href="#">@mutant_p1ayers</a></div><div class="contact-row"><span class="contact-label">WhatsApp</span><a class="contact-link" id="modalContactWa" href="#">+7 (950) 315-19-20</a></div><div class="contact-row"><span class="contact-label">Телефон</span><a class="contact-link" id="modalContactPhone" href="tel:+79503151920">+7 (950) 315-19-20</a></div></div><p class="contact-note">Контакты — заглушки. Впиши реальные в main.js (productDetails → contacts).</p></div><div class="modal-actions"><a href="#" class="button button-light modal-question" id="modalQuestion">Задать вопрос о товаре <span>→</span></a><button class="button button-dark modal-add" id="modalAdd">Добавить в корзину <span>↗</span></button></div></div></div></div></div>
+
+  <script src="products.js"></script>
+  <script src="product-details.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
